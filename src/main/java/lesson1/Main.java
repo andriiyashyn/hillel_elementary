@@ -1,5 +1,4 @@
-import lesson1.Animal;
-import lesson1.Cat;
+package lesson1;
 
 public class Main extends Animal {
 
@@ -18,7 +17,7 @@ public class Main extends Animal {
         main.test(cat);
     }
 
-    public static void test(Animal animal) {
+    public void test(Animal animal) {
         animal.voice();
         if (animal instanceof Cat) {
             System.out.println("this is cat");
