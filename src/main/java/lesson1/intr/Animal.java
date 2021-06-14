@@ -1,6 +1,6 @@
 package lesson1.intr;
 
 public interface Animal {
-    void run();
+    int run();
     void voice();
 }

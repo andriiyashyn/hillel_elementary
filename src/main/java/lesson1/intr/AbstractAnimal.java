@@ -2,7 +2,8 @@ package lesson1.intr;
 
 public abstract class AbstractAnimal implements Animal {
     @Override
-    public void run() {
+    public int run() {
         System.out.println("run");
+        return 1;
     }
 }

@@ -2,8 +2,9 @@ package lesson1.intr;
 
 public class Parrot implements Animal {
     @Override
-    public void run() {
+    public int run() {
         System.out.println("run parrot");
+        return 1;
     }
 
     @Override

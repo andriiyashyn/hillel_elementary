@@ -1,32 +1,24 @@
 package lesson1;
 
 public class Animal {
-    private static final String VARIB = "sdad";
-
-//    private final int sadsasd;
-
-
     private int height;
+    private String weight;
 
-    private String swetwrew;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-    int weight;
+        Animal animal = (Animal) o;
 
-    protected int variable1;
-
-    public int variable2;
-
-    public final int getHeight() {
-        return height;
+        if (height != animal.height) return false;
+        return weight != null ? weight.equals(animal.weight) : animal.weight == null;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    @Override
+    public int hashCode() {
+        int result = height;
+        result = 31 * result + (weight != null ? weight.hashCode() : 0);
+        return result;
     }
-
-    public void voice() {
-        System.out.println("gav gav");
-    }
-
-
 }
