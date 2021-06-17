@@ -8,17 +8,17 @@ public class Main extends Animal {
 
     public static void main(String[] args) {
         Animal animal = new Animal();
-        animal.voice();
+//        animal.vo ice();
 
         Animal cat = new Cat();
-        cat.voice();
+//        cat.voice();
 
         Main main = new Main();
         main.test(cat);
     }
 
     public void test(Animal animal) {
-        animal.voice();
+//        animal.voice();
         if (animal instanceof Cat) {
             System.out.println("this is cat");
         }
@@ -28,10 +28,9 @@ public class Main extends Animal {
         }
     }
 
-    @Override
-    public void setHeight(int height) {
-        super.setHeight(height);
-    }
+//    public void setHeight(int height) {
+//        super.setHeight(height);
+//    }
 
     static {
         System.out.println("hello");
