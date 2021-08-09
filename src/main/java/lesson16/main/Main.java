@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -33,22 +34,22 @@ public class Main {
 //        else
 //            System.out.println("result".toCharArray());
 
-        MyFunctIntr myFunctIntr = new MyFunctIntr() {
-            @Override
-            public int run(String first, String second) {
-                System.out.println(first + second);
-                return first.length() + second.length();
-            }
-        };
-
-        MyFunctIntr myFunctIntrWithLambda = (a, b) -> concat(a,b);
-
-        System.out.println(myFunctIntr.run("asdas", "asdasd"));
-        myFunctIntrWithLambda.run("asdas", "asdasd");
-
-        Predicate<List> predicate = (first) -> first.isEmpty();
-
-        predicate.test(new ArrayList());
+//        MyFunctIntr myFunctIntr = new MyFunctIntr() {
+//            @Override
+//            public int run(String first, String second) {
+//                System.out.println(first + second);
+//                return first.length() + second.length();
+//            }
+//        };
+//
+//        MyFunctIntr myFunctIntrWithLambda = (a, b) -> concat(a,b);
+//
+//        System.out.println(myFunctIntr.run("asdas", "asdasd"));
+//        myFunctIntrWithLambda.run("asdas", "asdasd");
+//
+//        Predicate<List> predicate = (first) -> first.isEmpty();
+//
+//        predicate.test(new ArrayList());
 
 
     }
