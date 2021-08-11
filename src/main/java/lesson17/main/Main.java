@@ -1,4 +1,4 @@
-package lesson17.intr.lesson16.main;
+package lesson17.main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
