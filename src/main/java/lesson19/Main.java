@@ -1,5 +1,8 @@
 package lesson19;
 
+import lesson19.deadlock.FirstClass;
+import lesson19.deadlock.SecondClass;
+
 import java.util.concurrent.ExecutionException;
 
 public class Main {
@@ -24,26 +27,26 @@ public class Main {
 //            System.out.println("END");
 //        }
 
-        Thread thread1 = new Thread(Main::method);
-        Thread thread2 = new Thread(Main::method);
-
-        thread1.start();
-        thread2.start();
-
-        Thread.sleep(5000);
-        System.out.println(TEST);
-
-//        FirstClass firstClass = new FirstClass();
-//        SecondClass secondClass = new SecondClass();
+//        Thread thread1 = new Thread(Main::method);
+//        Thread thread2 = new Thread(Main::method);
 //
-//        firstClass.setSecondClass(secondClass);
-//        secondClass.setFirstClass(firstClass);
+//        thread1.start();
+//        thread2.start();
 //
-//        Thread first = new Thread(() -> System.out.println(firstClass.getStringFromSecondClass()));
-//        Thread second = new Thread(() -> System.out.println(secondClass.getStringFromFirstClass()));
-//
-//        first.start();
-//        second.start();
+//        Thread.sleep(5000);
+//        System.out.println(TEST);
+
+        FirstClass firstClass = new FirstClass();
+        SecondClass secondClass = new SecondClass();
+
+        firstClass.setSecondClass(secondClass);
+        secondClass.setFirstClass(firstClass);
+
+        Thread first = new Thread(() -> System.out.println(firstClass.getStringFromSecondClass()));
+        Thread second = new Thread(() -> System.out.println(secondClass.getStringFromFirstClass()));
+        
+        first.start();
+        second.start();
     }
 
 

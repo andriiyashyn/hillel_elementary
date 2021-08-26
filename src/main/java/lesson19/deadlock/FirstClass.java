@@ -15,6 +15,9 @@ public class FirstClass {
         return "Hello from first class";
     }
 
+    public void save() {
+    }
+
     public synchronized String getStringFromSecondClass() {
         try {
             Thread.sleep(10);
