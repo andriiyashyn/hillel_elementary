@@ -44,7 +44,7 @@ public class Main {
 
         Thread first = new Thread(() -> System.out.println(firstClass.getStringFromSecondClass()));
         Thread second = new Thread(() -> System.out.println(secondClass.getStringFromFirstClass()));
-        
+
         first.start();
         second.start();
     }
